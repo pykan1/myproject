@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">myproject</string>
+    <string name="title">Калькулятор</string>
+    <string name="bOpenMenu">Открыть меню</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_pifagor">Вычислить \"C\"</string>
+    <string name="resultinfo">Результат:&#160;</string>
+    <string name="input_a">Введите значение \"а\"</string>
+    <string name="input_b">Введите значение \"б\"</string>
+    <string name="result">Результат</string>
+
+</resources>

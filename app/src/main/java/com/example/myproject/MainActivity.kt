@@ -4,6 +4,7 @@ import android.os.Binder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.core.view.GravityCompat
@@ -18,30 +19,24 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        binding.bOpenMenu.setOnClickListener {
-            binding.Drawer.openDrawer(GravityCompat.START)
-
-        }
 
         binding.navView.setNavigationItemSelectedListener {
             when(it.itemId) {
                 R.id.teorema_pifagora -> openFrag(PifagorFragment.newInstance(), binding.PifagorHolder.id)
+                R.id.open_menu -> binding.Drawer.openDrawer(GravityCompat.START)
             }
             binding.Drawer.closeDrawer(GravityCompat.START)
+
+            true
+        }
+        binding.bottomNav.setOnItemSelectedListener {
+            when(it.itemId) {
+                R.id.open_menu -> binding.Drawer.openDrawer(GravityCompat.START)
+            }
             true
         }
 
     }
-//
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        when(item.itemId) {
-//            android.R.id.home -> finish()
-//
-//        }
-//        return true
-//    }
 
     private fun openFrag(f: Fragment, idHolder: Int) {
         supportFragmentManager

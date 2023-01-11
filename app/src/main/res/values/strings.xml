@@ -9,5 +9,7 @@
     <string name="input_a">Введите значение \"а\"</string>
     <string name="input_b">Введите значение \"б\"</string>
     <string name="result">Результат</string>
+    <string name="close_screen">Закрыть</string>
+    <string name="menu">Меню</string>
 
 </resources>
